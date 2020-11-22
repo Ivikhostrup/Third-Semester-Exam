@@ -4,10 +4,10 @@ namespace EksamensopgaveOOPefteraarIvik
 {
     public sealed class InsertCashTransaction : Transaction
     {
-        private int Id { get; set; }
-        private string User { get; set; }
-        private DateTime Date { get; set; }
-        private decimal Amount { get; set; }
+        public int Id { get; set; }
+        public string User { get; set; }
+        public DateTime Date { get; set; }
+        public decimal Amount { get; set; }
 
         public InsertCashTransaction(string user, decimal amount) : base(user, amount)
         {

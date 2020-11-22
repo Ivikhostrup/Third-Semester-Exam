@@ -5,15 +5,15 @@ namespace EksamensopgaveOOPefteraarIvik
     public class User : IComparable
     {
         // could probably make interface
-        private int Id { get; }
+        public int Id { get; }
 
-        private string FirstName { get; }
+        public string FirstName { get; }
 
-        private string LastName { get; }
+        public string LastName { get; }
 
-        private string UserName { get; }
+        public string UserName { get; }
 
-        private string Email { get; }
+        public string Email { get; }
 
         public decimal Balance { get; set; }
 

@@ -23,23 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="adafb397-9fcc-4697-8369-a2b7f8d45aed" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/IProductBase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ITransaction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.EksamensopgaveOOPefteraarIvik/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EksamensopgaveOOPefteraarIvik/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EksamensopgaveOOPefteraarIvik/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EksamensopgaveOOPefteraarIvik/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BuyTransaction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BuyTransaction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Product.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Product.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProductBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SeasonalProduct.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SeasonalProduct.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Transaction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Transaction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InsertCashTransaction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InsertCashTransaction.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/User.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/EksamensopgaveOOPefteraarIvik.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/EksamensopgaveOOPefteraarIvik.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/EksamensopgaveOOPefteraarIvik.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/EksamensopgaveOOPefteraarIvik.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/EksamensopgaveOOPefteraarIvik.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/EksamensopgaveOOPefteraarIvik.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +41,6 @@
         <option value="$PROJECT_DIR$/Product.ActiveStatus.cs" />
         <option value="$PROJECT_DIR$/User.CreditStatus.cs" />
         <option value="$PROJECT_DIR$/ITransaction.cs" />
-        <option value="$PROJECT_DIR$/InsertCashTransaction.cs" />
         <option value="$PROJECT_DIR$/Program.cs" />
         <option value="$PROJECT_DIR$/ProductBase.cs" />
         <option value="$PROJECT_DIR$/Product.cs" />
@@ -63,6 +48,7 @@
         <option value="$PROJECT_DIR$/IProductBase.cs" />
         <option value="$PROJECT_DIR$/BuyTransaction.cs" />
         <option value="$PROJECT_DIR$/Transaction.cs" />
+        <option value="$PROJECT_DIR$/InsertCashTransaction.cs" />
         <option value="$PROJECT_DIR$/User.cs" />
       </list>
     </option>
@@ -115,7 +101,7 @@
       <workItem from="1605823870296" duration="5832000" />
       <workItem from="1605865698141" duration="9472000" />
       <workItem from="1605956956755" duration="227000" />
-      <workItem from="1606076118516" duration="6604000" />
+      <workItem from="1606076118516" duration="7109000" />
     </task>
     <servers />
   </component>
