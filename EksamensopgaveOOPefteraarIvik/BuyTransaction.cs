@@ -4,12 +4,11 @@ namespace EksamensopgaveOOPefteraarIvik
 {
     public class BuyTransaction : Transaction
     {
-        private int Id { get; set; }
-
+        public int Id { get; set; }
         public Product Product { get; set; }
-        private string User { get; set; }
-        private DateTime Date { get; set; }
-        private decimal Amount { get; set; }
+        public string User { get; set; }
+        public DateTime Date { get; set; }
+        public decimal Amount { get; set; }
 
         //Have to figure out how to deal with which product was selected - Property? Made with constructor? List of products??
 

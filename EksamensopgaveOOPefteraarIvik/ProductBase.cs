@@ -1,16 +1,22 @@
 ﻿namespace EksamensopgaveOOPefteraarIvik
 {
-    public abstract class ProductBase
+    public abstract class ProductBase : IProductBase
     {
-        private int Id { get; set; }
-        private string Name { get; set; }
-        private decimal Price { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public decimal Price { get; set; }
+        
+        public bool IsActive { get; set; }
+        
+        public bool CanBeBoughtOnCredit { get; set; }
 
-        public ProductBase(int id, string name, decimal price)
+        public ProductBase(int id, string name, decimal price, bool isActive, bool canBeBoughtOnCredit)
         {
             Id = id;
             Name = name;
             Price = price;
+            IsActive = isActive;
+            CanBeBoughtOnCredit = canBeBoughtOnCredit;
         }
 
         public abstract override string ToString();

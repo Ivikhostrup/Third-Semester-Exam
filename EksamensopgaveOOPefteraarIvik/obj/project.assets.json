@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ivik Hostrup\\RiderProjects\\EksamensopgaveOOPefteraarIvik\\EksamensopgaveOOPefteraarIvik.csproj",
+      "projectUniqueName": "C:\\Users\\Ivik Hostrup\\source\\repos\\WebApplication\\WebApplication\\Content\\Third-Semester-Exam\\EksamensopgaveOOPefteraarIvik\\EksamensopgaveOOPefteraarIvik.csproj",
       "projectName": "EksamensopgaveOOPefteraarIvik",
-      "projectPath": "C:\\Users\\Ivik Hostrup\\RiderProjects\\EksamensopgaveOOPefteraarIvik\\EksamensopgaveOOPefteraarIvik.csproj",
+      "projectPath": "C:\\Users\\Ivik Hostrup\\source\\repos\\WebApplication\\WebApplication\\Content\\Third-Semester-Exam\\EksamensopgaveOOPefteraarIvik\\EksamensopgaveOOPefteraarIvik.csproj",
       "packagesPath": "C:\\Users\\Ivik Hostrup\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ivik Hostrup\\RiderProjects\\EksamensopgaveOOPefteraarIvik\\obj\\",
+      "outputPath": "C:\\Users\\Ivik Hostrup\\source\\repos\\WebApplication\\WebApplication\\Content\\Third-Semester-Exam\\EksamensopgaveOOPefteraarIvik\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet",

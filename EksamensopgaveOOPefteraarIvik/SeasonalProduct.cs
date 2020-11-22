@@ -4,22 +4,30 @@ namespace EksamensopgaveOOPefteraarIvik
 {
     public class SeasonalProduct : ProductBase
     {
-        private int Id { get; set; }
+        public int Id { get; set; }
 
-        private string Name { get; set; }
+        public string Name { get; set; }
 
-        private decimal Price { get; set; }
-     
-        private DateTime SeasonStartDate { get; set; }
+        public decimal Price { get; set; }
+        
+        public bool IsActive { get; set; }
+        
+        public bool CanBeBoughtOnCredit { get; set; }
 
-        private DateTime SeasonEndDate { get; set; }
+        public DateTime SeasonStartDate { get; set; }
+
+        public DateTime SeasonEndDate { get; set; }
         
 
-        public SeasonalProduct(int id, string name, decimal price, DateTime seasonStartDate, DateTime seasonEndDate) : base(id, name, price)
+        public SeasonalProduct(int id, string name, decimal price, DateTime seasonStartDate, DateTime seasonEndDate,
+                                bool isActive, bool canBeBoughtOnCredit) 
+            : base(id, name, price, isActive, canBeBoughtOnCredit)
         {
             Id += id;
             Name = name;
             Price = price;
+            IsActive = isActive;
+            CanBeBoughtOnCredit = canBeBoughtOnCredit;
             
             SeasonStartDate = seasonStartDate;
             SeasonEndDate = seasonEndDate;

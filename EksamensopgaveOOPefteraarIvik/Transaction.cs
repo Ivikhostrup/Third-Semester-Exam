@@ -2,7 +2,7 @@
 
 namespace EksamensopgaveOOPefteraarIvik
 {
-    public abstract class Transaction
+    public abstract class Transaction : ITransaction
     {
         public int Id { get; set; }
 
@@ -22,6 +22,9 @@ namespace EksamensopgaveOOPefteraarIvik
 
         public abstract override string ToString();
 
-        public abstract decimal Execute(decimal amount, string user);
+        public virtual decimal Execute(decimal amount, string user)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
