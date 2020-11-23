@@ -5,17 +5,6 @@ namespace EksamensopgaveOOPefteraarIvik.Products
 {
     public class SeasonalProduct : ProductBase
     {
-        private static int idCount = 0;
-        public int MyId { get; private set; }
-
-        public string Name { get; private set; }
-
-        public decimal Price { get; private set; }
-        
-        public bool IsActive { get; private set; }
-        
-        public bool CanBeBoughtOnCredit { get; private set; }
-
         public DateTime SeasonStartDate { get; private set; }
 
         public DateTime SeasonEndDate { get; private set; }
@@ -25,12 +14,6 @@ namespace EksamensopgaveOOPefteraarIvik.Products
                                 bool isActive, bool canBeBoughtOnCredit) 
             : base(name, price, isActive, canBeBoughtOnCredit)
         {
-            MyId = Interlocked.Increment(ref idCount);
-            Name = name;
-            Price = price;
-            IsActive = isActive;
-            CanBeBoughtOnCredit = canBeBoughtOnCredit;
-            
             SeasonStartDate = seasonStartDate;
             SeasonEndDate = seasonEndDate;
         }

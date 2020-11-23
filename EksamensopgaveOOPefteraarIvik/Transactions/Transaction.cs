@@ -1,31 +1,31 @@
 ﻿using System;
+using System.Threading;
 using EksamensopgaveOOPefteraarIvik.Users;
 
 namespace EksamensopgaveOOPefteraarIvik
 {
     public abstract class Transaction : ITransaction
     {
-        public int Id { get; set; }
+        private static int idCount = 0;
+        public int MyId { get; set; }
 
-        public User User { get; set; }
+        public IUser User { get; set; }
 
         public DateTime Date { get; set; }
 
         public decimal Amount { get; set; }
 
-        protected Transaction(User user, decimal amount)
+        protected Transaction(IUser user, DateTime date, decimal amount)
         {
+            MyId = Interlocked.Increment(ref idCount);
             User = user;
             Amount = amount;
-            
-            Date = DateTime.Now;
+            Date = date;
         }
 
         public abstract override string ToString();
 
-        public virtual decimal Execute(decimal amount, User user)
-        {
-            throw new NotImplementedException();
-        }
+        public abstract decimal Execute();
+
     }
 }

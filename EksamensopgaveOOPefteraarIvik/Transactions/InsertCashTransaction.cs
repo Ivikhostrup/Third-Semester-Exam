@@ -6,19 +6,10 @@ namespace EksamensopgaveOOPefteraarIvik
 {
     public sealed class InsertCashTransaction : Transaction
     {
-        private static int idCount = 0;
-        public int MyId { get; set; }
-        public User User { get; set; }
-        public DateTime Date { get; set; }
-        public decimal Amount { get; set; }
-
-        public InsertCashTransaction(User user, decimal amount) : base(user, amount)
+        
+        public InsertCashTransaction(IUser user, DateTime date, decimal amount) : base(user, date, amount)
         {
-            MyId = Interlocked.Increment(ref idCount);
-            User = user;
-            Amount = amount;
             
-            Date = DateTime.Now;
         }
 
         public override string ToString()
@@ -26,9 +17,9 @@ namespace EksamensopgaveOOPefteraarIvik
             return $"You are about to insert {Amount} into {User}'s account - The transaction date is {Date}";
         }
 
-        public override decimal Execute(decimal amount, User user)
+        public override decimal Execute()
         {
-            return user.Balance + amount;
+            return User.Balance += Amount;
         }
     }
 }

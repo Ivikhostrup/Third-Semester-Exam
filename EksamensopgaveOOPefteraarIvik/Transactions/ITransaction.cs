@@ -5,10 +5,10 @@ namespace EksamensopgaveOOPefteraarIvik
 {
     public interface ITransaction
     {
-        int Id { get; set; }
-        User User { get; set; }
+        int MyId { get; set; }
+        IUser User { get; set; }
         DateTime Date { get; set; }
         decimal Amount { get; set; }
-        decimal Execute(decimal amount, User user);
+        decimal Execute();
     }
 }

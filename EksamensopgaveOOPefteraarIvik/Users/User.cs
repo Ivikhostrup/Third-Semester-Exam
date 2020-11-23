@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.Threading;
 using EksamensopgaveOOPefteraarIvik.Exceptions;
 
@@ -20,6 +21,9 @@ namespace EksamensopgaveOOPefteraarIvik.Users
         public string Email { get; }
 
         public decimal Balance { get; set; }
+
+        public delegate void UserBalanceNotificationEventHandler(User user, decimal balance);
+        public event UserBalanceNotificationEventHandler UserBalanceNotified;
         
         // Interlocked.Increment safeguards against multiple concurrent updates to MyID
         public User(string firstName, string lastName, string userName, string email)
@@ -28,7 +32,7 @@ namespace EksamensopgaveOOPefteraarIvik.Users
             FirstName = firstName ?? throw new UserInformationNullExceptions("Must have first name");
             LastName = lastName ?? throw new UserInformationNullExceptions("Must have last name");
             UserName = userName ?? throw new UserInformationNullExceptions("Must have a username");
-            Email = email;
+            Email = IsValidEmail(email) ? email : throw new UserInformationNullExceptions("Invalid email address");
         }
 
         public override bool Equals(object obj)
@@ -48,7 +52,7 @@ namespace EksamensopgaveOOPefteraarIvik.Users
             }
         }
         
-        // TODO Hashcode will no longer deal with null - Update this
+        // TODO Non readonly property
         public override int GetHashCode()
         {
             // Unchecked to suppress overflow-checking
@@ -56,10 +60,10 @@ namespace EksamensopgaveOOPefteraarIvik.Users
             {
                 // Select suitable prime numbers for hashing
                 int hash = 13;
-                // Nullity check; are two objects the same instance
-                hash = (hash * 7) + (!ReferenceEquals(null, MyId) ? MyId.GetHashCode() : 0);
-                hash = (hash * 7) + (!ReferenceEquals(null, UserName) ? UserName.GetHashCode() : 0);
-                hash = (hash * 7) + (!ReferenceEquals(null, Email) ? Email.GetHashCode() : 0);
+                
+                hash = (hash * 7) + MyId.GetHashCode();
+                hash = (hash * 7) + UserName.GetHashCode();
+                hash = (hash * 7) + Email.GetHashCode();
 
                 return hash;
             }
@@ -86,6 +90,16 @@ namespace EksamensopgaveOOPefteraarIvik.Users
             }
         }
         
+        // TODO perhaps customize this - Dont know if necessary
+        public bool IsValidEmail(string email)
+        {
+            return new EmailAddressAttribute().IsValid(email);
+        }
         // TODO Event for checking balancing - warn when below 50 kroner and for every subsequent purchase. Make delegate: UserBalanceNotification
+
+        protected virtual void OnUserBalanceNotified(User user, decimal balance)
+        {
+            UserBalanceNotified?.Invoke(user, balance);
+        }
     }
 }

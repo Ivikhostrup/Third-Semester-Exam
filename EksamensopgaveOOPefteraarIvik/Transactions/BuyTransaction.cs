@@ -7,45 +7,37 @@ namespace EksamensopgaveOOPefteraarIvik
 {
     public class BuyTransaction : Transaction
     {
-        private static int idCount = 0;
-        public int MyId { get; set; }
-        public IProductBase Product { get; set; }
-        public User User { get; set; }
-        public decimal Amount { get; set; }
-        public DateTime Date { get; set; }
         
-
+        public IProductBase Product { get; set; }
+        
         //Have to figure out how to deal with which product was selected - Property? Made with constructor? List of products??
 
-        public BuyTransaction(User user, decimal amount, IProductBase product) : base(user, amount)
+        public BuyTransaction(IUser user, DateTime date, IProductBase product) : base(user, date, product.Price)
         {
-            MyId = Interlocked.Increment(ref idCount);
             Product = product;
-            User = user;
-            Amount = amount;
-            
-            Date = DateTime.Now;
         }
 
         public override string ToString()
         {
-            return $"You are about to pay {Amount} with the transaction ID {Id} - The transaction date is {Date}";
+            return $"You are about to pay {Amount} with the transaction ID {MyId} - The transaction date is {Date}";
         }
 
-        public override decimal Execute(decimal amount, User user)
+        public override decimal Execute()
         {
-            if (user.Balance < Product.Price && Product.CanBeBoughtOnCredit == true)
+            if (User.Balance < Product.Price && Product.CanBeBoughtOnCredit == true)
             {
-                return user.Balance - amount;
+                return User.Balance - Amount;
             }
-            else if(user.Balance < Product.Price && Product.CanBeBoughtOnCredit == false)
+            else if(User.Balance < Product.Price && Product.CanBeBoughtOnCredit == false)
             {
+                // TODO make exception for this - Whole function can probably be simplified
                 return 0;
             }
             else
             {
-                return user.Balance - amount;
+                return User.Balance - Amount;
             }
         }
+        
     }
 }

@@ -8,5 +8,7 @@ namespace EksamensopgaveOOPefteraarIvik.Exceptions
         {
             
         }
+        
+        // TODO More exceptions
     }
 }
