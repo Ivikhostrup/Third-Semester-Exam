@@ -1,4 +1,5 @@
 ﻿using System;
+using EksamensopgaveOOPefteraarIvik.Users;
 
 namespace EksamensopgaveOOPefteraarIvik
 {
@@ -6,13 +7,13 @@ namespace EksamensopgaveOOPefteraarIvik
     {
         public int Id { get; set; }
 
-        public string User { get; set; }
+        public User User { get; set; }
 
         public DateTime Date { get; set; }
 
         public decimal Amount { get; set; }
 
-        protected Transaction(string user, decimal amount)
+        protected Transaction(User user, decimal amount)
         {
             User = user;
             Amount = amount;
@@ -22,7 +23,7 @@ namespace EksamensopgaveOOPefteraarIvik
 
         public abstract override string ToString();
 
-        public virtual decimal Execute(decimal amount, string user)
+        public virtual decimal Execute(decimal amount, User user)
         {
             throw new NotImplementedException();
         }

@@ -1,17 +1,20 @@
 ﻿using System;
+using System.Threading;
+using EksamensopgaveOOPefteraarIvik.Users;
 
 namespace EksamensopgaveOOPefteraarIvik
 {
     public sealed class InsertCashTransaction : Transaction
     {
-        public int Id { get; set; }
-        public string User { get; set; }
+        private static int idCount = 0;
+        public int MyId { get; set; }
+        public User User { get; set; }
         public DateTime Date { get; set; }
         public decimal Amount { get; set; }
 
-        public InsertCashTransaction(string user, decimal amount) : base(user, amount)
+        public InsertCashTransaction(User user, decimal amount) : base(user, amount)
         {
-            Id += 1;
+            MyId = Interlocked.Increment(ref idCount);
             User = user;
             Amount = amount;
             
@@ -23,9 +26,9 @@ namespace EksamensopgaveOOPefteraarIvik
             return $"You are about to insert {Amount} into {User}'s account - The transaction date is {Date}";
         }
 
-        public override decimal Execute(decimal amount, string user)
+        public override decimal Execute(decimal amount, User user)
         {
-            throw new NotImplementedException();
+            return user.Balance + amount;
         }
     }
 }

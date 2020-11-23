@@ -23,9 +23,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="adafb397-9fcc-4697-8369-a2b7f8d45aed" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Exceptions/UserInformationNullExceptions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Products/SeasonalProduct.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Transactions/BuyTransaction.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Users/IUser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.EksamensopgaveOOPefteraarIvik/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EksamensopgaveOOPefteraarIvik/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EksamensopgaveOOPefteraarIvik/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EksamensopgaveOOPefteraarIvik/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InsertCashTransaction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InsertCashTransaction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BuyTransaction.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IProductBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Products/IProductBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ITransaction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Transactions/ITransaction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InsertCashTransaction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Transactions/InsertCashTransaction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Products/Product.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Products/ProductBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SeasonalProduct.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transaction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Transactions/Transaction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Users/User.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,16 +52,21 @@
       <list>
         <option value="$PROJECT_DIR$/Product.ActiveStatus.cs" />
         <option value="$PROJECT_DIR$/User.CreditStatus.cs" />
-        <option value="$PROJECT_DIR$/ITransaction.cs" />
         <option value="$PROJECT_DIR$/Program.cs" />
+        <option value="$PROJECT_DIR$/IProductBase.cs" />
         <option value="$PROJECT_DIR$/ProductBase.cs" />
         <option value="$PROJECT_DIR$/Product.cs" />
         <option value="$PROJECT_DIR$/SeasonalProduct.cs" />
-        <option value="$PROJECT_DIR$/IProductBase.cs" />
-        <option value="$PROJECT_DIR$/BuyTransaction.cs" />
         <option value="$PROJECT_DIR$/Transaction.cs" />
+        <option value="$PROJECT_DIR$/ITransaction.cs" />
         <option value="$PROJECT_DIR$/InsertCashTransaction.cs" />
+        <option value="$PROJECT_DIR$/BuyTransaction.cs" />
+        <option value="$PROJECT_DIR$/IUser.cs" />
         <option value="$PROJECT_DIR$/User.cs" />
+        <option value="$PROJECT_DIR$/Exceptions/UserInformationNullExceptions.cs" />
+        <option value="$PROJECT_DIR$/Users/User.cs" />
+        <option value="$PROJECT_DIR$/Products/Product.cs" />
+        <option value="$PROJECT_DIR$/Transactions/BuyTransaction.cs" />
       </list>
     </option>
   </component>
@@ -102,6 +119,7 @@
       <workItem from="1605865698141" duration="9472000" />
       <workItem from="1605956956755" duration="227000" />
       <workItem from="1606076118516" duration="7109000" />
+      <workItem from="1606134407281" duration="10779000" />
     </task>
     <servers />
   </component>
@@ -120,6 +138,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
@@ -149,5 +168,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605873005583" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1606140787421">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1606140787421" />
   </component>
 </project>

@@ -1,8 +1,9 @@
-﻿namespace EksamensopgaveOOPefteraarIvik
+﻿namespace EksamensopgaveOOPefteraarIvik.Products
 {
     public abstract class ProductBase : IProductBase
     {
-        public int Id { get; set; }
+        // Look into making abstract/virtual properties
+        public int MyId { get; set; }
         public string Name { get; set; }
         public decimal Price { get; set; }
         
@@ -10,9 +11,8 @@
         
         public bool CanBeBoughtOnCredit { get; set; }
 
-        public ProductBase(int id, string name, decimal price, bool isActive, bool canBeBoughtOnCredit)
+        public ProductBase(string name, decimal price, bool isActive, bool canBeBoughtOnCredit)
         {
-            Id = id;
             Name = name;
             Price = price;
             IsActive = isActive;
