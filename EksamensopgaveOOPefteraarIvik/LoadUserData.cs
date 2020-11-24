@@ -10,15 +10,7 @@ namespace EksamensopgaveOOPefteraarIvik
 
         public List<IUser> LoadData()
         {
-            StreamReader reader = new StreamReader("path");
-            UsersParser parsedUser = new UsersParser(';', );
-            
-            string line;
-
-            while ((line = reader.ReadLine()) != null)
-            {
-                
-            }
+            // Readalllines
         }
     }
 }
