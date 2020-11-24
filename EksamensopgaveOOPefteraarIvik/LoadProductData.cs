@@ -1,18 +1,18 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using EksamensopgaveOOPefteraarIvik.Users;
 
 namespace EksamensopgaveOOPefteraarIvik
 {
-    public class LoadUserData
+    public class LoadProductData
     {
-        public static List<UsersParser> LoadDataOfUsers(char separator, string filePath)
+
+        public static List<ProductParser> LoadDataOfProducts(char separator, string filePath)
         {
             return File
                 .ReadAllLines(filePath)
                 .Skip(1)
-                .Select(x => new UsersParser(separator, x))
+                .Select(x => new ProductParser(separator, x))
                 .ToList();
         }
         

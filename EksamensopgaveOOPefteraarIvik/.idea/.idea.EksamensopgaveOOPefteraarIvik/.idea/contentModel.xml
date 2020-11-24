@@ -7,12 +7,17 @@
     <e p="C:\Users\Ivik Hostrup\AppData\Roaming\JetBrains\Rider2020.2\extensions" t="IncludeRecursive" />
     <e p="C:\Users\Ivik Hostrup\source\repos\WebApplication\WebApplication\Content\Third-Semester-Exam\EksamensopgaveOOPefteraarIvik" t="IncludeRecursive">
       <e p="bin" t="ExcludeRecursive" />
+      <e p="Data" t="Include">
+        <e p="products.csv" t="Include" />
+        <e p="users.csv" t="Include" />
+      </e>
       <e p="EksamensopgaveOOPefteraarIvik.csproj" t="IncludeRecursive" />
       <e p="EksamensopgaveOOPefteraarIvik.csproj.DotSettings" t="Include" />
       <e p="EksamensopgaveOOPefteraarIvik.sln" t="IncludeFlat" />
       <e p="Exceptions" t="Include">
         <e p="UserInformationNullExceptions.cs" t="Include" />
       </e>
+      <e p="LoadProductData.cs" t="Include" />
       <e p="LoadUserData.cs" t="Include" />
       <e p="obj" t="ExcludeRecursive">
         <e p="Debug" t="Include">

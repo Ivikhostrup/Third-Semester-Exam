@@ -7,6 +7,9 @@ namespace EksamensopgaveOOPefteraarIvik.Stregsystem
 {
     public class Stregsystem : IStregsystem
     {
+        private List<IUser> Users = new List<IUser>();
+        private List<IProductBase> Products = new List<IProductBase>();
+        private List<ITransaction> Transactions = new List<ITransaction>();
         
         public IEnumerable<IProductBase> ActiveProducts { get; }
         
@@ -38,7 +41,9 @@ namespace EksamensopgaveOOPefteraarIvik.Stregsystem
 
         public IProductBase GetProductById(int id)
         {
-            throw new NotImplementedException();
+            IProductBase product = Products.Find(x => x.MyId == id);
+
+            return product ?? throw new NotImplementedException();
         }
 
         public IUser GetUsers(Func<User, bool> predicate)
@@ -55,7 +60,9 @@ namespace EksamensopgaveOOPefteraarIvik.Stregsystem
 
         public IUser GetUserByUsername(string username)
         {
-            throw new NotImplementedException();
+            IUser user = Users.Find(x => x.UserName == username);
+
+            return user ?? throw new NotImplementedException();
         }
         
         // TODO figure out how to subscribe to event in user class

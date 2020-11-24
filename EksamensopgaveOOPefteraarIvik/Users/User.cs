@@ -9,8 +9,8 @@ namespace EksamensopgaveOOPefteraarIvik.Users
     {
         // could probably make interface
         // Static int to maintain which count the current ID has across all instances of class
-        private static int IdCount = 0;
-        public int MyId { get; private set; }
+        
+        public uint MyId { get; private set; }
 
         public string FirstName { get; }
 
@@ -26,9 +26,9 @@ namespace EksamensopgaveOOPefteraarIvik.Users
         public event UserBalanceNotificationEventHandler UserBalanceNotified;
         
         // Interlocked.Increment safeguards against multiple concurrent updates to MyID
-        public User(string firstName, string lastName, string userName, string email)
+        public User(uint myId, string firstName, string lastName, string userName, string email)
         {
-            MyId = Interlocked.Increment(ref IdCount);
+            MyId = myId;
             FirstName = firstName ?? throw new UserInformationNullExceptions("Must have first name");
             LastName = lastName ?? throw new UserInformationNullExceptions("Must have last name");
             UserName = userName ?? throw new UserInformationNullExceptions("Must have a username");

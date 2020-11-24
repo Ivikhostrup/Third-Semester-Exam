@@ -4,10 +4,8 @@ namespace EksamensopgaveOOPefteraarIvik.Products
 {
     public class Product : ProductBase
     {
-        
-
-        // Interlocked.Increment safeguards against multiple concurrent updates to MyID
-        public Product(string name, decimal price, bool isActive, bool canBeBoughtOnCredit) : base(name, price, isActive, canBeBoughtOnCredit)
+        public Product(uint myId, string name, decimal price, bool isActive, bool canBeBoughtOnCredit) 
+            : base(myId, name, price, isActive, canBeBoughtOnCredit)
         {
             
         }

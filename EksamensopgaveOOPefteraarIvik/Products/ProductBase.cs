@@ -4,9 +4,7 @@ namespace EksamensopgaveOOPefteraarIvik.Products
 {
     public abstract class ProductBase : IProductBase
     {
-        // Look into making abstract/virtual properties
-        private static int idCount = 0;
-        public int MyId { get; set; }
+        public uint MyId { get; set; }
         public string Name { get; set; }
         public decimal Price { get; set; }
         
@@ -14,9 +12,9 @@ namespace EksamensopgaveOOPefteraarIvik.Products
         
         public bool CanBeBoughtOnCredit { get; set; }
 
-        public ProductBase(string name, decimal price, bool isActive, bool canBeBoughtOnCredit)
+        public ProductBase(uint myId, string name, decimal price, bool isActive, bool canBeBoughtOnCredit)
         {
-            MyId = Interlocked.Increment(ref idCount);
+            MyId = myId;
             Name = name;
             Price = price;
             IsActive = isActive;

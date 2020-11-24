@@ -10,9 +10,9 @@ namespace EksamensopgaveOOPefteraarIvik.Products
         public DateTime SeasonEndDate { get; private set; }
         
         // Interlocked.Increment safeguards against multiple concurrent updates to MyID
-        public SeasonalProduct(string name, decimal price, DateTime seasonStartDate, DateTime seasonEndDate,
+        public SeasonalProduct(uint myId, string name, decimal price, DateTime seasonStartDate, DateTime seasonEndDate,
                                 bool isActive, bool canBeBoughtOnCredit) 
-            : base(name, price, isActive, canBeBoughtOnCredit)
+            : base(myId, name, price, isActive, canBeBoughtOnCredit)
         {
             SeasonStartDate = seasonStartDate;
             SeasonEndDate = seasonEndDate;

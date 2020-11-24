@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Linq.Expressions;
+using EksamensopgaveOOPefteraarIvik.Users;
 
 namespace EksamensopgaveOOPefteraarIvik
 {
     public class UsersParser
     {
-        public uint Id { get; set; }
+        public uint MyId { get; set; }
         public string FirstName { get; set; }
 
         public string LastName { get; set; }
@@ -20,12 +21,18 @@ namespace EksamensopgaveOOPefteraarIvik
         {
             string[] fields = csvLine.Split(separator);
 
-            Id = uint.Parse(fields[0]);
+            MyId = uint.Parse(fields[0]);
             FirstName = fields[1];
             LastName = fields[2];
             Username = fields[3];
             Balance = decimal.Parse(fields[4]);
             Email = fields[5];
+        }
+        
+        public static implicit operator User(UsersParser usersParser)
+        {
+            return new User(usersParser.MyId, usersParser.FirstName, usersParser.LastName, usersParser.Username,
+                                usersParser.Email);
         }
         
     }

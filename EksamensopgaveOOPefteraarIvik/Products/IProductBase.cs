@@ -2,7 +2,7 @@
 {
     public interface IProductBase
     {
-        int MyId { get; set; }
+        uint MyId { get; set; }
         string Name { get; set; }
         decimal Price { get; set; }
         bool IsActive { get; set; }

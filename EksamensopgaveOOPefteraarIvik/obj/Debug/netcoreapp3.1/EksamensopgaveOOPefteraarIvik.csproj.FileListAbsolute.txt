@@ -11,3 +11,16 @@ C:\Users\Ivik Hostrup\RiderProjects\EksamensopgaveOOPefteraarIvik\obj\Debug\netc
 C:\Users\Ivik Hostrup\RiderProjects\EksamensopgaveOOPefteraarIvik\obj\Debug\netcoreapp3.1\EksamensopgaveOOPefteraarIvik.dll
 C:\Users\Ivik Hostrup\RiderProjects\EksamensopgaveOOPefteraarIvik\obj\Debug\netcoreapp3.1\EksamensopgaveOOPefteraarIvik.pdb
 C:\Users\Ivik Hostrup\RiderProjects\EksamensopgaveOOPefteraarIvik\obj\Debug\netcoreapp3.1\EksamensopgaveOOPefteraarIvik.genruntimeconfig.cache
+C:\Users\Ivik Hostrup\source\repos\WebApplication\WebApplication\Content\Third-Semester-Exam\EksamensopgaveOOPefteraarIvik\bin\Debug\netcoreapp3.1\EksamensopgaveOOPefteraarIvik.exe
+C:\Users\Ivik Hostrup\source\repos\WebApplication\WebApplication\Content\Third-Semester-Exam\EksamensopgaveOOPefteraarIvik\bin\Debug\netcoreapp3.1\EksamensopgaveOOPefteraarIvik.deps.json
+C:\Users\Ivik Hostrup\source\repos\WebApplication\WebApplication\Content\Third-Semester-Exam\EksamensopgaveOOPefteraarIvik\bin\Debug\netcoreapp3.1\EksamensopgaveOOPefteraarIvik.runtimeconfig.json
+C:\Users\Ivik Hostrup\source\repos\WebApplication\WebApplication\Content\Third-Semester-Exam\EksamensopgaveOOPefteraarIvik\bin\Debug\netcoreapp3.1\EksamensopgaveOOPefteraarIvik.runtimeconfig.dev.json
+C:\Users\Ivik Hostrup\source\repos\WebApplication\WebApplication\Content\Third-Semester-Exam\EksamensopgaveOOPefteraarIvik\bin\Debug\netcoreapp3.1\EksamensopgaveOOPefteraarIvik.dll
+C:\Users\Ivik Hostrup\source\repos\WebApplication\WebApplication\Content\Third-Semester-Exam\EksamensopgaveOOPefteraarIvik\bin\Debug\netcoreapp3.1\EksamensopgaveOOPefteraarIvik.pdb
+C:\Users\Ivik Hostrup\source\repos\WebApplication\WebApplication\Content\Third-Semester-Exam\EksamensopgaveOOPefteraarIvik\obj\Debug\netcoreapp3.1\EksamensopgaveOOPefteraarIvik.csprojAssemblyReference.cache
+C:\Users\Ivik Hostrup\source\repos\WebApplication\WebApplication\Content\Third-Semester-Exam\EksamensopgaveOOPefteraarIvik\obj\Debug\netcoreapp3.1\EksamensopgaveOOPefteraarIvik.AssemblyInfoInputs.cache
+C:\Users\Ivik Hostrup\source\repos\WebApplication\WebApplication\Content\Third-Semester-Exam\EksamensopgaveOOPefteraarIvik\obj\Debug\netcoreapp3.1\EksamensopgaveOOPefteraarIvik.AssemblyInfo.cs
+C:\Users\Ivik Hostrup\source\repos\WebApplication\WebApplication\Content\Third-Semester-Exam\EksamensopgaveOOPefteraarIvik\obj\Debug\netcoreapp3.1\EksamensopgaveOOPefteraarIvik.csproj.CoreCompileInputs.cache
+C:\Users\Ivik Hostrup\source\repos\WebApplication\WebApplication\Content\Third-Semester-Exam\EksamensopgaveOOPefteraarIvik\obj\Debug\netcoreapp3.1\EksamensopgaveOOPefteraarIvik.dll
+C:\Users\Ivik Hostrup\source\repos\WebApplication\WebApplication\Content\Third-Semester-Exam\EksamensopgaveOOPefteraarIvik\obj\Debug\netcoreapp3.1\EksamensopgaveOOPefteraarIvik.pdb
+C:\Users\Ivik Hostrup\source\repos\WebApplication\WebApplication\Content\Third-Semester-Exam\EksamensopgaveOOPefteraarIvik\obj\Debug\netcoreapp3.1\EksamensopgaveOOPefteraarIvik.genruntimeconfig.cache
