@@ -23,21 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="adafb397-9fcc-4697-8369-a2b7f8d45aed" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ProductParser.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Stregsystem/IStregsystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Stregsystem/Stregsystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UsersParser.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LoadUserData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EksamensopgaveOOPefteraarIvik/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EksamensopgaveOOPefteraarIvik/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EksamensopgaveOOPefteraarIvik/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EksamensopgaveOOPefteraarIvik/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Exceptions/UserInformationNullExceptions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Exceptions/UserInformationNullExceptions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Products/Product.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Products/Product.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Products/ProductBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Products/ProductBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Products/SeasonalProduct.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Products/SeasonalProduct.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Transactions/BuyTransaction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Transactions/BuyTransaction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Transactions/ITransaction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Transactions/ITransaction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Transactions/InsertCashTransaction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Transactions/InsertCashTransaction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Transactions/Transaction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Transactions/Transaction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Users/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Users/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsersParser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UsersParser.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +67,7 @@
         <option value="$PROJECT_DIR$/Stregsystem/IStregsystem.cs" />
         <option value="$PROJECT_DIR$/ProductParser.cs" />
         <option value="$PROJECT_DIR$/UsersParser.cs" />
+        <option value="$PROJECT_DIR$/LoadUserData.cs" />
       </list>
     </option>
   </component>
@@ -132,7 +122,7 @@
       <workItem from="1605865698141" duration="9472000" />
       <workItem from="1605956956755" duration="227000" />
       <workItem from="1606076118516" duration="7109000" />
-      <workItem from="1606134407281" duration="25540000" />
+      <workItem from="1606134407281" duration="29863000" />
     </task>
     <servers />
   </component>

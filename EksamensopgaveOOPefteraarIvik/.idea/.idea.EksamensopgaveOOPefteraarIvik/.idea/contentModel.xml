@@ -13,6 +13,7 @@
       <e p="Exceptions" t="Include">
         <e p="UserInformationNullExceptions.cs" t="Include" />
       </e>
+      <e p="LoadUserData.cs" t="Include" />
       <e p="obj" t="ExcludeRecursive">
         <e p="Debug" t="Include">
           <e p="netcoreapp3.1" t="Include">
