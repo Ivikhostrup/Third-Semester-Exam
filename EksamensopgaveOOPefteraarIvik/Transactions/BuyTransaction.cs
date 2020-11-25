@@ -26,7 +26,7 @@ namespace EksamensopgaveOOPefteraarIvik
         {
             if (User.Balance < Product.Price && Product.CanBeBoughtOnCredit == true)
             {
-                return User.Balance - Amount;
+                return User.Balance -= Amount;
             }
             else if(User.Balance < Product.Price && Product.CanBeBoughtOnCredit == false)
             {
@@ -35,7 +35,7 @@ namespace EksamensopgaveOOPefteraarIvik
             }
             else
             {
-                return User.Balance - Amount;
+                return User.Balance -= Amount;
             }
         }
         

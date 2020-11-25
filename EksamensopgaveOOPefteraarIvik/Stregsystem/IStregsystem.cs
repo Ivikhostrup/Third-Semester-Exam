@@ -5,6 +5,8 @@ using EksamensopgaveOOPefteraarIvik.Users;
 
 namespace EksamensopgaveOOPefteraarIvik.Stregsystem
 {
+    public delegate void UserBalanceNotification(IUser user, decimal balance);
+    
     public interface IStregsystem
     {
         IEnumerable<IProductBase> ActiveProducts { get; }
@@ -15,12 +17,13 @@ namespace EksamensopgaveOOPefteraarIvik.Stregsystem
         
         IProductBase GetProductById(int id);
 
-        IEnumerable<ITransaction> GetTransactions(User user, int count);
+        IEnumerable<ITransaction> GetTransactions(IUser user, int count);
 
-        IUser GetUsers(Func<User, bool> predicate);
+        IEnumerable<IUser> GetUsers(Func<IUser, bool> predicate);
 
         IUser GetUserByUsername(string username);
 
-        event User.UserBalanceNotificationEventHandler UserBalanceWarning;
+        event UserBalanceNotification UserBalanceWarning;
+
     }
 }

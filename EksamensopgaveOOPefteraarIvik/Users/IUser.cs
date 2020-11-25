@@ -1,4 +1,6 @@
-﻿namespace EksamensopgaveOOPefteraarIvik.Users
+﻿using System.Collections.Generic;
+
+namespace EksamensopgaveOOPefteraarIvik.Users
 {
     public interface IUser
     {
@@ -8,6 +10,7 @@
         string UserName { get; }
         string Email { get; }
         decimal Balance { get; set; }
+        List<ITransaction> Log { get; set; }
         bool Equals(object obj);
         int GetHashCode();
         string ToString();

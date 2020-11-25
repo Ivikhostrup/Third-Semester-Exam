@@ -11,14 +11,19 @@
         <e p="products.csv" t="Include" />
         <e p="users.csv" t="Include" />
       </e>
+      <e p="DataLoading" t="Include">
+        <e p="LoadProductData.cs" t="Include" />
+        <e p="LoadUserData.cs" t="Include" />
+        <e p="ProductParser.cs" t="Include" />
+        <e p="UsersParser.cs" t="Include" />
+      </e>
       <e p="EksamensopgaveOOPefteraarIvik.csproj" t="IncludeRecursive" />
       <e p="EksamensopgaveOOPefteraarIvik.csproj.DotSettings" t="Include" />
       <e p="EksamensopgaveOOPefteraarIvik.sln" t="IncludeFlat" />
       <e p="Exceptions" t="Include">
         <e p="UserInformationNullExceptions.cs" t="Include" />
       </e>
-      <e p="LoadProductData.cs" t="Include" />
-      <e p="LoadUserData.cs" t="Include" />
+      <e p="IStregsystemUI.cs" t="Include" />
       <e p="obj" t="ExcludeRecursive">
         <e p="Debug" t="Include">
           <e p="netcoreapp3.1" t="Include">
@@ -27,7 +32,6 @@
         </e>
       </e>
       <e p="packages" t="ExcludeRecursive" />
-      <e p="ProductParser.cs" t="Include" />
       <e p="Products" t="Include">
         <e p="IProductBase.cs" t="Include" />
         <e p="Product.cs" t="Include" />
@@ -39,6 +43,7 @@
         <e p="IStregsystem.cs" t="Include" />
         <e p="Stregsystem.cs" t="Include" />
       </e>
+      <e p="StregsystemCLI.cs" t="Include" />
       <e p="Transactions" t="Include">
         <e p="BuyTransaction.cs" t="Include" />
         <e p="InsertCashTransaction.cs" t="Include" />
@@ -49,7 +54,6 @@
         <e p="IUser.cs" t="Include" />
         <e p="User.cs" t="Include" />
       </e>
-      <e p="UsersParser.cs" t="Include" />
     </e>
   </component>
 </project>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using EksamensopgaveOOPefteraarIvik.Products;
 using EksamensopgaveOOPefteraarIvik.Users;
 
@@ -11,12 +12,14 @@ namespace EksamensopgaveOOPefteraarIvik.Stregsystem
         private List<IProductBase> Products = new List<IProductBase>();
         private List<ITransaction> Transactions = new List<ITransaction>();
         
+        
         public IEnumerable<IProductBase> ActiveProducts { get; }
         
         // TODO Make log and possibly event
         public BuyTransaction BuyProduct(IUser user, IProductBase product, decimal amount)
         {
             BuyTransaction buyTransaction = new BuyTransaction(user, DateTime.Now, product);
+            
             
             ExecuteTransaction(buyTransaction);
             
@@ -28,6 +31,7 @@ namespace EksamensopgaveOOPefteraarIvik.Stregsystem
         {
             InsertCashTransaction insertCash = new InsertCashTransaction(user, DateTime.Now, amount);
             
+            
             ExecuteTransaction(insertCash);
             
             return insertCash;
@@ -36,6 +40,7 @@ namespace EksamensopgaveOOPefteraarIvik.Stregsystem
         // TODO add to list of logs
         public void ExecuteTransaction(ITransaction transaction)
         {
+            Transactions.Add(transaction);
             transaction.Execute();
         }
 
@@ -46,15 +51,15 @@ namespace EksamensopgaveOOPefteraarIvik.Stregsystem
             return product ?? throw new NotImplementedException();
         }
 
-        public IUser GetUsers(Func<User, bool> predicate)
+        public IEnumerable<IUser> GetUsers(Func<IUser, bool> predicate)
         {
-            throw new NotImplementedException();
+            return Users.Where(x => predicate(x));
         }
 
-       
-        public IEnumerable<ITransaction> GetTransactions(User user, int count)
+       // TODO Change the mapping from x.User
+        public IEnumerable<ITransaction> GetTransactions(IUser user, int count)
         {
-            throw new NotImplementedException();
+            return Transactions.OrderByDescending((x => x.User)).Take(count);
         }
 
 
@@ -64,10 +69,10 @@ namespace EksamensopgaveOOPefteraarIvik.Stregsystem
 
             return user ?? throw new NotImplementedException();
         }
-        
-        // TODO figure out how to subscribe to event in user class
-        public event User.UserBalanceNotificationEventHandler UserBalanceWarning;
 
-        
+        // TODO figure out how to subscribe to event in user class
+        public event UserBalanceNotification UserBalanceWarning;
+
+ 
     }
 }

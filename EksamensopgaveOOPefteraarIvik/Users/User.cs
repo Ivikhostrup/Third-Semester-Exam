@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Threading;
 using EksamensopgaveOOPefteraarIvik.Exceptions;
@@ -9,7 +10,7 @@ namespace EksamensopgaveOOPefteraarIvik.Users
     {
         // could probably make interface
         // Static int to maintain which count the current ID has across all instances of class
-        
+        private const decimal threshold = 50;
         public uint MyId { get; private set; }
 
         public string FirstName { get; }
@@ -20,10 +21,26 @@ namespace EksamensopgaveOOPefteraarIvik.Users
 
         public string Email { get; }
 
-        public decimal Balance { get; set; }
+        private decimal balance;
+        public decimal Balance
+        {
+            get => balance;
+            set
+            {
+                balance = value;
+                
+                if (balance < threshold)
+                {
+                    BalanceChanged?.Invoke(balance);
+                }
+            }
+        }
 
-        public delegate void UserBalanceNotificationEventHandler(User user, decimal balance);
-        public event UserBalanceNotificationEventHandler UserBalanceNotified;
+        public List<ITransaction> Log { get; set; }
+
+        public delegate void BalanceChangedWatcher(decimal balance);
+
+        public event BalanceChangedWatcher BalanceChanged;
         
         // Interlocked.Increment safeguards against multiple concurrent updates to MyID
         public User(uint myId, string firstName, string lastName, string userName, string email)
@@ -94,12 +111,6 @@ namespace EksamensopgaveOOPefteraarIvik.Users
         public bool IsValidEmail(string email)
         {
             return new EmailAddressAttribute().IsValid(email);
-        }
-        // TODO Event for checking balancing - warn when below 50 kroner and for every subsequent purchase. Make delegate: UserBalanceNotification
-
-        protected virtual void OnUserBalanceNotified(User user, decimal balance)
-        {
-            UserBalanceNotified?.Invoke(user, balance);
-        }
+        }        
     }
 }
