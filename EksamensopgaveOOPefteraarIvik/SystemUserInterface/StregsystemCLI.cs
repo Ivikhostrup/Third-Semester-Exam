@@ -9,6 +9,7 @@ namespace EksamensopgaveOOPefteraarIvik.SystemUserInterface
     public class StregsystemCli : IStregsystemUI
     {
         private IStregsystem Stregsystem { get; set; }
+        
         private bool running;
         
         public StregsystemCli(IStregsystem stregsystem)
@@ -23,11 +24,11 @@ namespace EksamensopgaveOOPefteraarIvik.SystemUserInterface
         {
             while (running)
             {
-                    
-
                 DisplayProducts(Stregsystem.ActiveProducts);
-                Close();
+                Stregsystem.UserBalanceWarning += DisplayBalanceWarning;
                 Console.ReadLine();
+                
+                Close();
             }
         }
         
@@ -43,13 +44,10 @@ namespace EksamensopgaveOOPefteraarIvik.SystemUserInterface
                 Console.WriteLine(item.Name);
             }
         }
-        public void DisplayProducts(IProductBase product)
-        {
-            throw new System.NotImplementedException();
-        }
+        
         public void DisplayUserInfo(IUser user)
         {
-            throw new System.NotImplementedException();
+            Console.WriteLine(user);
         }
         
         public void DisplayUserBuysProduct(int count, ITransaction transaction)
@@ -61,10 +59,14 @@ namespace EksamensopgaveOOPefteraarIvik.SystemUserInterface
         {
             throw new System.NotImplementedException();
         }
-        
+
+        public void DisplayBalanceWarning(IUser user, decimal balance)
+        {
+            Console.WriteLine($"Your balance for {user.UserName} is below 50 kr. Your current balance is {balance}");
+        }
         public void DisplayInsufficientCash(IUser user, IProductBase product)
         {
-            throw new System.NotImplementedException();
+            Console.WriteLine($"You've tried to purchase {product.Name}. You do not have the funds");
         }
         
         public void DisplayUserNotFound(string username)
@@ -87,12 +89,9 @@ namespace EksamensopgaveOOPefteraarIvik.SystemUserInterface
             Console.WriteLine($"The command {adminCommand} does not exist");
         }
 
-        
         public void DisplayGeneralError(string errorString)
         {
             throw new System.NotImplementedException();
         }
-
-        
     }
 }

@@ -6,6 +6,8 @@ using EksamensopgaveOOPefteraarIvik.Exceptions;
 
 namespace EksamensopgaveOOPefteraarIvik.Users
 {
+    public delegate void BalanceChangedWatcher(decimal balance);
+    
     public class User : IUser, IComparable<IUser>
     {
         // could probably make interface
@@ -31,16 +33,14 @@ namespace EksamensopgaveOOPefteraarIvik.Users
                 
                 if (balance < threshold)
                 {
-                    BalanceChanged?.Invoke(balance);
+                    BalanceLow?.Invoke(balance);
                 }
             }
         }
 
         public List<ITransaction> Log { get; set; }
 
-        public delegate void BalanceChangedWatcher(decimal balance);
-
-        public event BalanceChangedWatcher BalanceChanged;
+        public event BalanceChangedWatcher BalanceLow;
 
         public User(char separator, string csvLine)
         {
@@ -99,7 +99,7 @@ namespace EksamensopgaveOOPefteraarIvik.Users
 
         public override string ToString()
         {
-            return FirstName + LastName + Email;
+            return $"Your first name: {FirstName}, your last name: {LastName}, and your email: {Email}";
         }
 
         public int CompareTo(IUser other)

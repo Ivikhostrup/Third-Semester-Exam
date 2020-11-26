@@ -14,6 +14,6 @@ namespace EksamensopgaveOOPefteraarIvik.Users
         bool Equals(object obj);
         int GetHashCode();
         string ToString();
-        
+        event BalanceChangedWatcher BalanceLow;
     }
 }

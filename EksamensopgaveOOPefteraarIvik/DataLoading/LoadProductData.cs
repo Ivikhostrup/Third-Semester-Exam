@@ -7,7 +7,7 @@ namespace EksamensopgaveOOPefteraarIvik
 {
     public class LoadProductData
     {
-        public static List<Product> LoadDataOfProducts(char separator, string filePath)
+        public static IEnumerable<IProductBase> LoadDataOfProducts(char separator, string filePath)
         {
             return File
                 .ReadAllLines(filePath)

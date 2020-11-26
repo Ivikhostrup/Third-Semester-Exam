@@ -8,7 +8,7 @@ namespace EksamensopgaveOOPefteraarIvik
 {
     public class LoadUserData
     {
-        public static List<User> LoadDataOfUsers(char separator, string filePath)
+        public static IEnumerable<IUser> LoadDataOfUsers(char separator, string filePath)
         {
             return File
                 .ReadAllLines(filePath)

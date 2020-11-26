@@ -18,8 +18,8 @@ namespace EksamensopgaveOOPefteraarIvik.Stregsystem
         private char separatorForUsers = ',';
         
 
-        public List<User> Users { get; set; }
-        public List<Product> Products { get; set; }
+        private List<IUser> Users { get; set; } = new List<IUser>();
+        private List<IProductBase> Products { get; set; } = new List<IProductBase>();
         
         private List<ITransaction> Transactions = new List<ITransaction>();
 
@@ -31,10 +31,25 @@ namespace EksamensopgaveOOPefteraarIvik.Stregsystem
         public Stregsystem()
         {
             LoadData();
+            UserBalanceLowHandler();
             
-
         }
-        
+
+        public void UserBalanceLowHandler()
+        {
+            foreach (IUser user in Users)
+            {
+                user.BalanceLow += WarnUserOfLowBalance;
+            }
+        }
+
+        public void WarnUserOfLowBalance(decimal amount)
+        {
+            foreach (IUser user in Users)
+            {
+                UserBalanceWarning?.Invoke(user, amount);
+            }
+        }
         
         // TODO Make log and possibly event
         public BuyTransaction BuyProduct(IUser user, IProductBase product, decimal amount)
@@ -96,14 +111,8 @@ namespace EksamensopgaveOOPefteraarIvik.Stregsystem
 
         private void LoadData()
         {
-            Users = LoadUserData.LoadDataOfUsers(separatorForUsers, UsersFilePath);
-            Products = LoadProductData.LoadDataOfProducts(separatorForProducts, productsFilePath);
-            
+            Users = LoadUserData.LoadDataOfUsers(separatorForUsers, UsersFilePath).ToList();
+            Products = LoadProductData.LoadDataOfProducts(separatorForProducts, productsFilePath).ToList();
         }
-        
-        
-        
-        
-        
     }
 }
