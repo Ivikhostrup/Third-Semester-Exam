@@ -1,30 +1,49 @@
 ﻿using System;
+using System.Collections.Generic;
 using EksamensopgaveOOPefteraarIvik.Products;
 using EksamensopgaveOOPefteraarIvik.Stregsystem;
 using EksamensopgaveOOPefteraarIvik.Users;
 
-namespace EksamensopgaveOOPefteraarIvik
+namespace EksamensopgaveOOPefteraarIvik.SystemUserInterface
 {
     public class StregsystemCli : IStregsystemUI
     {
-        private readonly IStregsystem stregsystem;
+        private IStregsystem Stregsystem { get; set; }
         private bool running;
         
         public StregsystemCli(IStregsystem stregsystem)
         {
-            this.stregsystem = stregsystem;
+            Stregsystem = stregsystem;
             running = true;
         }
         
+        // TODO Figure out a quickbuy menu - Should receive username and if username is valid display all active products
+        // TODO Figureout of to get product list from stregsystem
         public void Start()
         {
             while (running)
             {
-                throw new NotImplementedException();
+                    
+
+                DisplayProducts(Stregsystem.ActiveProducts);
+                Close();
+                Console.ReadLine();
             }
         }
         
         public void Close()
+        {
+            running = false;
+        }
+        
+        public void DisplayProducts(IEnumerable<IProductBase> product)
+        {
+            foreach (var item in product)
+            {
+                Console.WriteLine(item.Name);
+            }
+        }
+        public void DisplayProducts(IProductBase product)
         {
             throw new System.NotImplementedException();
         }
@@ -69,13 +88,6 @@ namespace EksamensopgaveOOPefteraarIvik
         }
 
         
-
-        
-
-        
-
-        
-
         public void DisplayGeneralError(string errorString)
         {
             throw new System.NotImplementedException();

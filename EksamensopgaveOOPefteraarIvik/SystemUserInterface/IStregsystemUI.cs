@@ -1,7 +1,7 @@
 ﻿using EksamensopgaveOOPefteraarIvik.Products;
 using EksamensopgaveOOPefteraarIvik.Users;
 
-namespace EksamensopgaveOOPefteraarIvik
+namespace EksamensopgaveOOPefteraarIvik.SystemUserInterface
 {
     public interface IStregsystemUI
     {

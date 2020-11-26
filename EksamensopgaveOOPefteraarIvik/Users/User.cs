@@ -41,15 +41,26 @@ namespace EksamensopgaveOOPefteraarIvik.Users
         public delegate void BalanceChangedWatcher(decimal balance);
 
         public event BalanceChangedWatcher BalanceChanged;
-        
-        // Interlocked.Increment safeguards against multiple concurrent updates to MyID
-        public User(uint myId, string firstName, string lastName, string userName, string email)
+
+        public User(char separator, string csvLine)
+        {
+            string[] fields = csvLine.Split(separator);
+
+            MyId = uint.Parse(fields[0]);
+            FirstName = fields[1];
+            LastName = fields[2];
+            UserName = fields[3];
+            Balance = decimal.Parse(fields[4]);
+            Email = fields[5];
+        }
+        public User(uint myId, string firstName, string lastName, string userName, decimal balance, string email)
         {
             MyId = myId;
             FirstName = firstName ?? throw new UserInformationNullExceptions("Must have first name");
             LastName = lastName ?? throw new UserInformationNullExceptions("Must have last name");
             UserName = userName ?? throw new UserInformationNullExceptions("Must have a username");
             Email = IsValidEmail(email) ? email : throw new UserInformationNullExceptions("Invalid email address");
+            Balance = balance;
         }
 
         public override bool Equals(object obj)

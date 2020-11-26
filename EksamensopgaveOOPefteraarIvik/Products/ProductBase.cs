@@ -1,4 +1,5 @@
-﻿using System.Threading;
+﻿using System.Text.RegularExpressions;
+using System.Threading;
 
 namespace EksamensopgaveOOPefteraarIvik.Products
 {
@@ -11,6 +12,17 @@ namespace EksamensopgaveOOPefteraarIvik.Products
         public bool IsActive { get; set; }
         
         public bool CanBeBoughtOnCredit { get; set; }
+
+        public ProductBase(char separator, string csvLine)
+        {
+            string[] field = csvLine.Split(separator);
+
+            MyId = uint.Parse(field[0]);
+            Name = field[1];
+            Name = Regex.Replace(Name, "<.*?>", string.Empty);
+            Price = decimal.Parse(field[2]);
+            IsActive = field[3] != "0";
+        }
 
         public ProductBase(uint myId, string name, decimal price, bool isActive, bool canBeBoughtOnCredit)
         {

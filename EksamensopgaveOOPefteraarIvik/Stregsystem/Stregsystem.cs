@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using EksamensopgaveOOPefteraarIvik.Products;
 using EksamensopgaveOOPefteraarIvik.Users;
@@ -8,12 +9,32 @@ namespace EksamensopgaveOOPefteraarIvik.Stregsystem
 {
     public class Stregsystem : IStregsystem
     {
-        private List<IUser> Users = new List<IUser>();
-        private List<IProductBase> Products = new List<IProductBase>();
+        
+        private static string directoryInfo = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName;
+        private string productsFilePath = Path.Combine(directoryInfo, "Data", "products.csv");
+        private char separatorForProducts = ';';
+        
+        private string UsersFilePath = Path.Combine(directoryInfo, "Data", "users.csv");
+        private char separatorForUsers = ',';
+        
+
+        public List<User> Users { get; set; }
+        public List<Product> Products { get; set; }
+        
         private List<ITransaction> Transactions = new List<ITransaction>();
+
+        public event UserBalanceNotification UserBalanceWarning;
+
+        public IEnumerable<IProductBase> ActiveProducts => Products.Where(product => product.IsActive);
+
+
+        public Stregsystem()
+        {
+            LoadData();
+            
+
+        }
         
-        
-        public IEnumerable<IProductBase> ActiveProducts { get; }
         
         // TODO Make log and possibly event
         public BuyTransaction BuyProduct(IUser user, IProductBase product, decimal amount)
@@ -71,8 +92,18 @@ namespace EksamensopgaveOOPefteraarIvik.Stregsystem
         }
 
         // TODO figure out how to subscribe to event in user class
-        public event UserBalanceNotification UserBalanceWarning;
 
- 
+
+        private void LoadData()
+        {
+            Users = LoadUserData.LoadDataOfUsers(separatorForUsers, UsersFilePath);
+            Products = LoadProductData.LoadDataOfProducts(separatorForProducts, productsFilePath);
+            
+        }
+        
+        
+        
+        
+        
     }
 }
