@@ -10,10 +10,12 @@ namespace EksamensopgaveOOPefteraarIvik
         void DisplayUserInfo(IUser user);
         void DisplayTooManyArguementsError(string command);
         void DisplayAdminCommandNotFoundMessage(string adminCommand);
-        void DisplayUserBuysProduct(int count, BuyTransaction transaction);
+        void DisplayUserBuysProduct(int count, ITransaction transaction);
         void DisplayUserBuysProduct(ITransaction transaction);
         void Close();
         void DisplayInsufficientCash(IUser user, IProductBase product);
         void DisplayGeneralError(string errorString);
+        void Start();
+        
     }
 }
