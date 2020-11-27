@@ -10,12 +10,9 @@ namespace EksamensopgaveOOPefteraarIvik.Controller
 {
     public class StregsystemController
     {
-        
-        // TODO Currently not parsing in inactive products - needs fix
-        
         private IStregsystem stregsystem;
         private IStregsystemUI ui;
-        public Dictionary<string, Action<string[]>> adminCommands = new Dictionary<string, Action<string[]>>();
+        public Dictionary<string, Action<string[]>> adminCommands;
         
         public StregsystemController(IStregsystem stregsystem, IStregsystemUI ui)
         {
@@ -28,28 +25,39 @@ namespace EksamensopgaveOOPefteraarIvik.Controller
 
         public void CheckIfAdmin(string args)
         {
-            string[] command = args.Split(":").ToArray();
-            Console.WriteLine(command[1]);
+            
+            if (args.Contains(":"))
+            {
+                string[] command = args.Split(' ');
+                
+                adminCommands[command[0]](command);
+            }
+            else if (!args.Contains(":"))
+            {
+                UserCommands(args);
+            }
 
         }
         public void AddAdminCommands()
         {
-            adminCommands.Add(":quit", (command) => ui.Close());
-            adminCommands.Add(":q", (command) => ui.Close());
-            adminCommands.Add(":activate", (command) => ChangeProductStatus(command, true));
-            adminCommands.Add(":deactivate", (command) => ChangeProductStatus(command, false));
-            adminCommands.Add(":crediton", (command) => ChangeProductCreditStatus(command, true));
-            adminCommands.Add(":creditoff", (command) => ChangeProductCreditStatus(command, false));
-            adminCommands.Add(":addcredits", (command) => ChangeProductCreditStatus(command, false));
+            adminCommands = new Dictionary<string, Action<string[]>>()
+            {
+                {":quit", (command) => ui.Close() },
+                {":q", (command) => ui.Close() },
+                {":activate", (command) => ChangeProductStatus(command, true) },
+                {":deactivate", (command) => ChangeProductStatus(command, false)},
+                {":crediton", (command) => ChangeProductCreditStatus(command, true)},
+                {":creditoff", (command) => ChangeProductCreditStatus(command, false)},
+                {":addcredits", (command) => AddCreditToUser(command)}
+            };
         }
 
         public void ChangeProductStatus(string[] args, bool status)
         {
-            string[] command = args[0].Split(' ').Skip(1).ToArray();
             
-            if (command[1] != null)
+            if (args[0] != null)
             {
-                IProductBase product = stregsystem.GetProductById(int.Parse(command[3]));
+                IProductBase product = stregsystem.GetProductById(int.Parse(args[1]));
 
                 product.IsActive = status;
             }
@@ -57,30 +65,29 @@ namespace EksamensopgaveOOPefteraarIvik.Controller
 
         public void ChangeProductCreditStatus(string[] args, bool status)
         {
-            string[] command = args[0].Split(' ').Skip(1).ToArray();
-            
-            if (command[1] != null)
+            if (args[0] != null)
             {
-                IProductBase product = stregsystem.GetProductById(int.Parse(command[3]));
+                IProductBase product = stregsystem.GetProductById(int.Parse(args[1]));
 
                 product.CanBeBoughtOnCredit = status;
+                Console.WriteLine($"{product.MyId} buy on credit status is now {status}");
             }
         }
 
-        public void AddCreditToUser(string[] args, decimal amount)
+        public void AddCreditToUser(string[] args)
         {
-            string[] command = args[0].Split(' ').Skip(1).ToArray();
-            if (command[1] != null)
+            if (args[0] != null)
             {
-                IUser user = stregsystem.GetUserByUsername(command[3]);
-
+                IUser user = stregsystem.GetUserByUsername(args[1]);
+                decimal amount = decimal.Parse(args[2]);
                 user.Balance += amount;
+                Console.WriteLine($"User {user.UserName} now has {user.Balance} credits");
             }
         }
 
-        public void UserCommands(string[] args)
+        public void UserCommands(string args)
         {
-            string[] command = args[0].Split(' ');
+            string[] command = args.Split(' ');
 
             if (command.Length == 1)
             {
@@ -98,10 +105,9 @@ namespace EksamensopgaveOOPefteraarIvik.Controller
 
         public void UserBuysProduct(string username, string productId)
         {
-
-            var user = stregsystem.GetUserByUsername(username);
-            var product = stregsystem.GetProductById(int.Parse(productId));
-            var cost = product.Price;
+            IUser user = stregsystem.GetUserByUsername(username);
+            IProductBase product = stregsystem.GetProductById(int.Parse(productId));
+            decimal cost = product.Price;
             
             ui.DisplayUserBuysProduct(user, product);
             stregsystem.BuyProduct(user, product, cost);
@@ -109,7 +115,7 @@ namespace EksamensopgaveOOPefteraarIvik.Controller
 
         public void DisplayUserInformation(string username)
         {
-            var user = stregsystem.GetUserByUsername(username);
+            IUser user = stregsystem.GetUserByUsername(username);
             ui.DisplayUserInfo(user);
         }
     }

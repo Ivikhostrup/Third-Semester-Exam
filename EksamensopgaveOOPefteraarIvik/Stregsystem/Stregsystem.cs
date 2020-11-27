@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using EksamensopgaveOOPefteraarIvik.Exceptions;
 using EksamensopgaveOOPefteraarIvik.Products;
 using EksamensopgaveOOPefteraarIvik.Users;
 
@@ -34,11 +35,6 @@ namespace EksamensopgaveOOPefteraarIvik.Stregsystem
             UserBalanceLowHandler();
             
         }
-
-        public void SetActiveState()
-        {
-            
-        }
         
         public void UserBalanceLowHandler()
         {
@@ -56,7 +52,6 @@ namespace EksamensopgaveOOPefteraarIvik.Stregsystem
             }
         }
         
-        // TODO Make log and possibly event
         public BuyTransaction BuyProduct(IUser user, IProductBase product, decimal amount)
         {
             BuyTransaction buyTransaction = new BuyTransaction(user, DateTime.Now, product);
@@ -66,8 +61,7 @@ namespace EksamensopgaveOOPefteraarIvik.Stregsystem
             
             return buyTransaction;
         }
-        
-        // TODO Make log and possibly event
+               
         public InsertCashTransaction AddCreditsToAccount(IUser user, decimal amount)
         {
             InsertCashTransaction insertCash = new InsertCashTransaction(user, DateTime.Now, amount);
@@ -78,7 +72,6 @@ namespace EksamensopgaveOOPefteraarIvik.Stregsystem
             return insertCash;
         }
         
-        // TODO add to list of logs
         public void ExecuteTransaction(ITransaction transaction)
         {
             Transactions.Add(transaction);
@@ -89,15 +82,14 @@ namespace EksamensopgaveOOPefteraarIvik.Stregsystem
         {
             IProductBase product = Products.Find(x => x.MyId == id);
 
-            return product ?? throw new NotImplementedException();
+            return product ?? throw new ProductDoesNotExistException("The product does not exist");
         }
 
         public IEnumerable<IUser> GetUsers(Func<IUser, bool> predicate)
         {
             return Users.Where(x => predicate(x));
         }
-
-       // TODO Change the mapping from x.User
+        
         public IEnumerable<ITransaction> GetTransactions(IUser user, int count)
         {
             return Transactions.OrderByDescending((x => x.User)).Take(count);
@@ -108,13 +100,10 @@ namespace EksamensopgaveOOPefteraarIvik.Stregsystem
         {
             IUser user = Users.Find(x => x.UserName == username);
 
-            return user ?? throw new NotImplementedException();
+            return user ?? throw new UserInformationNullExceptions("Cannot find specified user");
         }
 
-        // TODO figure out how to subscribe to event in user class
-
-
-        private void LoadData()
+       private void LoadData()
         {
             Users = LoadUserData.LoadDataOfUsers(separatorForUsers, UsersFilePath).ToList();
             Products = LoadProductData.LoadDataOfProducts(separatorForProducts, productsFilePath).ToList();

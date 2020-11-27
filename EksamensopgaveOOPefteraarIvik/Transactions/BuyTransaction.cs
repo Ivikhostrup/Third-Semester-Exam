@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading;
+using EksamensopgaveOOPefteraarIvik.Exceptions;
 using EksamensopgaveOOPefteraarIvik.Products;
 using EksamensopgaveOOPefteraarIvik.Users;
 
@@ -30,8 +31,7 @@ namespace EksamensopgaveOOPefteraarIvik
             }
             else if(User.Balance < Product.Price && Product.CanBeBoughtOnCredit == false)
             {
-                // TODO make exception for this - Whole function can probably be simplified
-                return 0;
+                throw new NotEnoughFundsException("You dont have enough funds for this purchase");
             }
             else
             {

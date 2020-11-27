@@ -29,9 +29,10 @@ namespace EksamensopgaveOOPefteraarIvik.SystemUserInterface
                 DisplayProducts(Stregsystem.ActiveProducts);
                 var command = Console.ReadLine();
                 CommandEntered?.Invoke(command);
-                
 
-                Close();
+
+                Console.ReadKey();
+                Console.Clear();
             }
         }
         
@@ -50,6 +51,7 @@ namespace EksamensopgaveOOPefteraarIvik.SystemUserInterface
         
         public void DisplayUserInfo(IUser user)
         {
+            
             Console.WriteLine(user);
         }
         

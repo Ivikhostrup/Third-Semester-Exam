@@ -98,7 +98,7 @@ namespace EksamensopgaveOOPefteraarIvik.Users
 
         public override string ToString()
         {
-            return $"Your first name: {FirstName}, your last name: {LastName}, and your email: {Email}";
+            return $"Your first name: {FirstName}, your last name: {LastName}, and your email: {Email} and your balance: {balance}";
         }
 
         public int CompareTo(IUser other)
@@ -117,7 +117,6 @@ namespace EksamensopgaveOOPefteraarIvik.Users
             }
         }
         
-        // TODO perhaps customize this - Dont know if necessary
         public bool IsValidEmail(string email)
         {
             return new EmailAddressAttribute().IsValid(email);
