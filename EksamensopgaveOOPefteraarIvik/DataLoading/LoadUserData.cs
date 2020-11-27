@@ -1,10 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using EksamensopgaveOOPefteraarIvik.Products;
 using EksamensopgaveOOPefteraarIvik.Users;
 
-namespace EksamensopgaveOOPefteraarIvik
+namespace EksamensopgaveOOPefteraarIvik.DataLoading
 {
     public class LoadUserData
     {

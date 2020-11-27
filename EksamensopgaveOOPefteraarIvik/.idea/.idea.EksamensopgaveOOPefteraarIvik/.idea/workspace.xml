@@ -23,21 +23,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="adafb397-9fcc-4697-8369-a2b7f8d45aed" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Exceptions/NotEnoughFundsException.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Exceptions/ProductDoesNotExistException.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.EksamensopgaveOOPefteraarIvik/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EksamensopgaveOOPefteraarIvik/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.EksamensopgaveOOPefteraarIvik/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EksamensopgaveOOPefteraarIvik/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller/StregsystemController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/StregsystemController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Exceptions/UserInformationNullExceptions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Exceptions/UserInformationNullExceptions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataLoading/LoadProductData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataLoading/LoadProductData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataLoading/LoadUserData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataLoading/LoadUserData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Stregsystem/Stregsystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Stregsystem/Stregsystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SystemUserInterface/StregsystemCLI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SystemUserInterface/StregsystemCLI.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Transactions/BuyTransaction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Transactions/BuyTransaction.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Users/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Users/User.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/EksamensopgaveOOPefteraarIvik.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/EksamensopgaveOOPefteraarIvik.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/EksamensopgaveOOPefteraarIvik.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/EksamensopgaveOOPefteraarIvik.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/EksamensopgaveOOPefteraarIvik.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/EksamensopgaveOOPefteraarIvik.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/EksamensopgaveOOPefteraarIvik.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/EksamensopgaveOOPefteraarIvik.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/EksamensopgaveOOPefteraarIvik.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/EksamensopgaveOOPefteraarIvik.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,8 +71,6 @@
         <option value="$PROJECT_DIR$/Products/ProductBase.cs" />
         <option value="$PROJECT_DIR$/Products/Product.cs" />
         <option value="$PROJECT_DIR$/DataLoading/UsersParser.cs" />
-        <option value="$PROJECT_DIR$/DataLoading/LoadUserData.cs" />
-        <option value="$PROJECT_DIR$/DataLoading/LoadProductData.cs" />
         <option value="$PROJECT_DIR$/Users/IUser.cs" />
         <option value="$PROJECT_DIR$/StregsystemCommandParser.cs" />
         <option value="$PROJECT_DIR$/StregsystemController/StregsystemCommandParser.cs" />
@@ -90,14 +78,16 @@
         <option value="$PROJECT_DIR$/Stregsystem/IStregsystem.cs" />
         <option value="$PROJECT_DIR$/Program.cs" />
         <option value="$PROJECT_DIR$/Exceptions/NotEnoughFundsException.cs" />
-        <option value="$PROJECT_DIR$/Transactions/BuyTransaction.cs" />
         <option value="$PROJECT_DIR$/Exceptions/ProductDoesNotExistException.cs" />
-        <option value="$PROJECT_DIR$/Users/User.cs" />
         <option value="$PROJECT_DIR$/Exceptions/UserInformationNullExceptions.cs" />
         <option value="$PROJECT_DIR$/SystemUserInterface/StregsystemCLI.cs" />
         <option value="$PROJECT_DIR$/SystemUserInterface/IStregsystemUI.cs" />
         <option value="$PROJECT_DIR$/Stregsystem/Stregsystem.cs" />
         <option value="$PROJECT_DIR$/Controller/StregsystemController.cs" />
+        <option value="$PROJECT_DIR$/DataLoading/LoadProductData.cs" />
+        <option value="$PROJECT_DIR$/DataLoading/LoadUserData.cs" />
+        <option value="$PROJECT_DIR$/Transactions/BuyTransaction.cs" />
+        <option value="$PROJECT_DIR$/Users/User.cs" />
       </list>
     </option>
   </component>
@@ -159,6 +149,7 @@
       <workItem from="1606315175773" duration="18781000" />
       <workItem from="1606394563201" duration="23436000" />
       <workItem from="1606475328335" duration="24185000" />
+      <workItem from="1606507391120" duration="171000" />
     </task>
     <servers />
   </component>

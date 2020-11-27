@@ -11,8 +11,6 @@ namespace EksamensopgaveOOPefteraarIvik
         
         public IProductBase Product { get; set; }
         
-        //Have to figure out how to deal with which product was selected - Property? Made with constructor? List of products??
-
         public BuyTransaction(IUser user, DateTime date, IProductBase product) : base(user, date, product.Price)
         {
             Product = product;

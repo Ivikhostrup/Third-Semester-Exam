@@ -10,7 +10,6 @@ namespace EksamensopgaveOOPefteraarIvik.Users
     
     public class User : IUser, IComparable<IUser>
     {
-        // could probably make interface
         // Static int to maintain which count the current ID has across all instances of class
         private const decimal threshold = 50;
         public uint MyId { get; private set; }
@@ -73,7 +72,6 @@ namespace EksamensopgaveOOPefteraarIvik.Users
             else
             {
                 // If they are the same type: Can safely typecast and do check
-                // Note to self: May need to just check on ID since these should be unique
                 User user = (User)obj;
                 return (FirstName == user.FirstName && LastName == user.LastName &&
                         UserName == user.UserName && Email == user.Email);

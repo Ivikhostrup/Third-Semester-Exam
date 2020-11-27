@@ -3,7 +3,7 @@ using System.IO;
 using System.Linq;
 using EksamensopgaveOOPefteraarIvik.Products;
 
-namespace EksamensopgaveOOPefteraarIvik
+namespace EksamensopgaveOOPefteraarIvik.DataLoading
 {
     public class LoadProductData
     {
