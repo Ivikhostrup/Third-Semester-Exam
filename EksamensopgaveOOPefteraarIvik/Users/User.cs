@@ -80,7 +80,6 @@ namespace EksamensopgaveOOPefteraarIvik.Users
             }
         }
         
-        // TODO Non readonly property
         public override int GetHashCode()
         {
             // Unchecked to suppress overflow-checking

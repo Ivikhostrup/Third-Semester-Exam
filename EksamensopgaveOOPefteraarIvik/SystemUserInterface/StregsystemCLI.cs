@@ -6,9 +6,12 @@ using EksamensopgaveOOPefteraarIvik.Users;
 
 namespace EksamensopgaveOOPefteraarIvik.SystemUserInterface
 {
+    public delegate void UserCommandWatcher(string command);
+    
     public class StregsystemCli : IStregsystemUI
     {
         private IStregsystem Stregsystem { get; set; }
+        public event UserCommandWatcher CommandEntered;
         
         private bool running;
         
@@ -18,16 +21,16 @@ namespace EksamensopgaveOOPefteraarIvik.SystemUserInterface
             running = true;
         }
         
-        // TODO Figure out a quickbuy menu - Should receive username and if username is valid display all active products
-        // TODO Figureout of to get product list from stregsystem
         public void Start()
         {
             while (running)
             {
-                DisplayProducts(Stregsystem.ActiveProducts);
                 Stregsystem.UserBalanceWarning += DisplayBalanceWarning;
-                Console.ReadLine();
+                DisplayProducts(Stregsystem.ActiveProducts);
+                var command = Console.ReadLine();
+                CommandEntered?.Invoke(command);
                 
+
                 Close();
             }
         }
@@ -41,7 +44,7 @@ namespace EksamensopgaveOOPefteraarIvik.SystemUserInterface
         {
             foreach (var item in product)
             {
-                Console.WriteLine(item.Name);
+                Console.WriteLine($"You can buy ID {item.MyId}      {item.Name}");
             }
         }
         
@@ -50,14 +53,14 @@ namespace EksamensopgaveOOPefteraarIvik.SystemUserInterface
             Console.WriteLine(user);
         }
         
-        public void DisplayUserBuysProduct(int count, ITransaction transaction)
+        public void DisplayUserBuysProduct(IUser user, IProductBase product, int count)
         {
-            throw new System.NotImplementedException();
+            Console.WriteLine($"{user.UserName}: You have purchased {count} of {product.Name}");
         }
         
-        public void DisplayUserBuysProduct(ITransaction transaction)
+        public void DisplayUserBuysProduct(IUser user, IProductBase product)
         {
-            throw new System.NotImplementedException();
+            Console.WriteLine($"{user.UserName}: You have purchased {product.Name}");
         }
 
         public void DisplayBalanceWarning(IUser user, decimal balance)
@@ -91,7 +94,7 @@ namespace EksamensopgaveOOPefteraarIvik.SystemUserInterface
 
         public void DisplayGeneralError(string errorString)
         {
-            throw new System.NotImplementedException();
+            Console.WriteLine("Something went wrong");
         }
     }
 }

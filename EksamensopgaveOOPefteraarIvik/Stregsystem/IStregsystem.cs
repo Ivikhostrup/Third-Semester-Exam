@@ -24,6 +24,7 @@ namespace EksamensopgaveOOPefteraarIvik.Stregsystem
         IUser GetUserByUsername(string username);
 
         event UserBalanceNotification UserBalanceWarning;
+        
 
     }
 }

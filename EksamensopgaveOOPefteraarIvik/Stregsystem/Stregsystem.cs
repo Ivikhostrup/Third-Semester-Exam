@@ -35,6 +35,11 @@ namespace EksamensopgaveOOPefteraarIvik.Stregsystem
             
         }
 
+        public void SetActiveState()
+        {
+            
+        }
+        
         public void UserBalanceLowHandler()
         {
             foreach (IUser user in Users)

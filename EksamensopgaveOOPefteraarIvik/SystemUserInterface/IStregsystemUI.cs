@@ -10,12 +10,14 @@ namespace EksamensopgaveOOPefteraarIvik.SystemUserInterface
         void DisplayUserInfo(IUser user);
         void DisplayTooManyArguementsError(string command);
         void DisplayAdminCommandNotFoundMessage(string adminCommand);
-        void DisplayUserBuysProduct(int count, ITransaction transaction);
-        void DisplayUserBuysProduct(ITransaction transaction);
+        void DisplayUserBuysProduct(IUser user, IProductBase product, int count);
+        void DisplayUserBuysProduct(IUser user, IProductBase product);
         void Close();
         void DisplayInsufficientCash(IUser user, IProductBase product);
         void DisplayGeneralError(string errorString);
         void Start();
+        
+        event UserCommandWatcher CommandEntered;
         
     }
 }

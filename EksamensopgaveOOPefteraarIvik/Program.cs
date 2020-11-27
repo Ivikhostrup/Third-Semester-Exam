@@ -1,4 +1,5 @@
-﻿using EksamensopgaveOOPefteraarIvik.Stregsystem;
+﻿using EksamensopgaveOOPefteraarIvik.Controller;
+using EksamensopgaveOOPefteraarIvik.Stregsystem;
 using EksamensopgaveOOPefteraarIvik.SystemUserInterface;
 
 namespace EksamensopgaveOOPefteraarIvik
@@ -9,6 +10,7 @@ namespace EksamensopgaveOOPefteraarIvik
         {
             IStregsystem stregsystem = new Stregsystem.Stregsystem();
             IStregsystemUI ui = new StregsystemCli(stregsystem);
+            var parser = new StregsystemController(stregsystem, ui);
             
             ui.Start();
         }
