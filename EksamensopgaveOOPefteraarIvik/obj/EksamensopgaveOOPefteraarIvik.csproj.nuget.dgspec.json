@@ -1,26 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ivik Hostrup\\source\\repos\\WebApplication\\WebApplication\\Content\\Third-Semester-Exam\\EksamensopgaveOOPefteraarIvik\\EksamensopgaveOOPefteraarIvik.csproj": {}
+    "C:\\Users\\Ivikh\\source\\repos\\Third-Semester-Exam\\EksamensopgaveOOPefteraarIvik\\EksamensopgaveOOPefteraarIvik.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ivik Hostrup\\source\\repos\\WebApplication\\WebApplication\\Content\\Third-Semester-Exam\\EksamensopgaveOOPefteraarIvik\\EksamensopgaveOOPefteraarIvik.csproj": {
+    "C:\\Users\\Ivikh\\source\\repos\\Third-Semester-Exam\\EksamensopgaveOOPefteraarIvik\\EksamensopgaveOOPefteraarIvik.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ivik Hostrup\\source\\repos\\WebApplication\\WebApplication\\Content\\Third-Semester-Exam\\EksamensopgaveOOPefteraarIvik\\EksamensopgaveOOPefteraarIvik.csproj",
+        "projectUniqueName": "C:\\Users\\Ivikh\\source\\repos\\Third-Semester-Exam\\EksamensopgaveOOPefteraarIvik\\EksamensopgaveOOPefteraarIvik.csproj",
         "projectName": "EksamensopgaveOOPefteraarIvik",
-        "projectPath": "C:\\Users\\Ivik Hostrup\\source\\repos\\WebApplication\\WebApplication\\Content\\Third-Semester-Exam\\EksamensopgaveOOPefteraarIvik\\EksamensopgaveOOPefteraarIvik.csproj",
-        "packagesPath": "C:\\Users\\Ivik Hostrup\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ivik Hostrup\\source\\repos\\WebApplication\\WebApplication\\Content\\Third-Semester-Exam\\EksamensopgaveOOPefteraarIvik\\obj\\",
+        "projectPath": "C:\\Users\\Ivikh\\source\\repos\\Third-Semester-Exam\\EksamensopgaveOOPefteraarIvik\\EksamensopgaveOOPefteraarIvik.csproj",
+        "packagesPath": "C:\\Users\\Ivikh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ivikh\\source\\repos\\Third-Semester-Exam\\EksamensopgaveOOPefteraarIvik\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Ivik Hostrup\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Ivikh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"

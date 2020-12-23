@@ -1,13 +1,12 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "C:\\Users\\Ivik Hostrup\\source\\repos\\WebApplication\\WebApplication\\Content\\Third-Semester-Exam\\EksamensopgaveOOPefteraarIvik\\EksamensopgaveOOPefteraarIvik.csproj",
+    "projectUniqueName": "C:\\Users\\Ivikh\\source\\repos\\Third-Semester-Exam\\EksamensopgaveOOPefteraarIvik\\EksamensopgaveOOPefteraarIvik.csproj",
     "projectName": "EksamensopgaveOOPefteraarIvik",
-    "projectPath": "C:\\Users\\Ivik Hostrup\\source\\repos\\WebApplication\\WebApplication\\Content\\Third-Semester-Exam\\EksamensopgaveOOPefteraarIvik\\EksamensopgaveOOPefteraarIvik.csproj",
-    "outputPath": "C:\\Users\\Ivik Hostrup\\source\\repos\\WebApplication\\WebApplication\\Content\\Third-Semester-Exam\\EksamensopgaveOOPefteraarIvik\\obj\\",
+    "projectPath": "C:\\Users\\Ivikh\\source\\repos\\Third-Semester-Exam\\EksamensopgaveOOPefteraarIvik\\EksamensopgaveOOPefteraarIvik.csproj",
+    "outputPath": "C:\\Users\\Ivikh\\source\\repos\\Third-Semester-Exam\\EksamensopgaveOOPefteraarIvik\\obj\\",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
-      "C:\\Microsoft\\Xamarin\\NuGet",
       "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
     ],
     "originalTargetFrameworks": [
