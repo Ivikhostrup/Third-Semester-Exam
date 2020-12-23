@@ -23,11 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="adafb397-9fcc-4697-8369-a2b7f8d45aed" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/DataLoading/LoadProductData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataLoading/LoadProductData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataLoading/LoadUserData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataLoading/LoadUserData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stregsystem/Stregsystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Stregsystem/Stregsystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Transactions/BuyTransaction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Transactions/BuyTransaction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Users/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Users/User.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +84,7 @@
         <option value="$PROJECT_DIR$/DataLoading/LoadUserData.cs" />
         <option value="$PROJECT_DIR$/Transactions/BuyTransaction.cs" />
         <option value="$PROJECT_DIR$/Users/User.cs" />
+        <option value="$PROJECT_DIR$/Test.cs" />
       </list>
     </option>
   </component>
@@ -150,6 +147,7 @@
       <workItem from="1606394563201" duration="23436000" />
       <workItem from="1606475328335" duration="24185000" />
       <workItem from="1606507391120" duration="171000" />
+      <workItem from="1608744678341" duration="270000" />
     </task>
     <servers />
   </component>

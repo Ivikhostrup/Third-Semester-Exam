@@ -47,6 +47,7 @@
         <e p="IStregsystemUI.cs" t="Include" />
         <e p="StregsystemCLI.cs" t="Include" />
       </e>
+      <e p="Test.cs" t="Include" />
       <e p="Transactions" t="Include">
         <e p="BuyTransaction.cs" t="Include" />
         <e p="InsertCashTransaction.cs" t="Include" />
