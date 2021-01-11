@@ -32,7 +32,8 @@ namespace EksamensopgaveOOPefteraarIvik.Products
             IsActive = isActive;
             CanBeBoughtOnCredit = canBeBoughtOnCredit;
         }
-
+        
+        // Forcing derived class to provide a new implementation
         public abstract override string ToString();
     }
 }

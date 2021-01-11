@@ -12,6 +12,8 @@ namespace EksamensopgaveOOPefteraarIvik.Controller
     {
         private IStregsystem stregsystem;
         private IStregsystemUI ui;
+        
+        // Action<string[] - Method with parameter of string[]
         public Dictionary<string, Action<string[]>> adminCommands;
         
         public StregsystemController(IStregsystem stregsystem, IStregsystemUI ui)
@@ -22,7 +24,7 @@ namespace EksamensopgaveOOPefteraarIvik.Controller
 
             ui.CommandEntered += CheckIfAdmin;
         }
-
+        
         public void CheckIfAdmin(string args)
         {
             

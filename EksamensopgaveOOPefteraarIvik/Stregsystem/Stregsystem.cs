@@ -44,7 +44,8 @@ namespace EksamensopgaveOOPefteraarIvik.Stregsystem
                 user.BalanceLow += WarnUserOfLowBalance;
             }
         }
-
+        
+        // ?. Null conditional operater - If UserBalanceWarning is null it will not throw exception
         public void WarnUserOfLowBalance(decimal amount)
         {
             foreach (IUser user in Users)
@@ -85,7 +86,8 @@ namespace EksamensopgaveOOPefteraarIvik.Stregsystem
 
             return product ?? throw new ProductDoesNotExistException("The product does not exist");
         }
-
+        
+        // Could be used to find a specific person given name, ID or otherwise
         public IEnumerable<IUser> GetUsers(Func<IUser, bool> predicate)
         {
             return Users.Where(x => predicate(x));
@@ -103,7 +105,8 @@ namespace EksamensopgaveOOPefteraarIvik.Stregsystem
 
             return user ?? throw new UserInformationNullExceptions("Cannot find specified user");
         }
-
+        
+        // Could make loadDataOfProducts and users non static by instantiating the class first
        private void LoadData()
         {
             Users = LoadUserData.LoadDataOfUsers(separatorForUsers, UsersFilePath).ToList();
